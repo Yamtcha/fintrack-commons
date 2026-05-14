@@ -6,34 +6,26 @@
 
     <servers>
         <server>
-            <id>github</id>
-            <username>Yamtcha</username>
-            <password>YOUR_GITHUB_PAT</password>
+            <id>nexus</id>
+            <username>admin</username>
+            <password>NEXUS_PASSWORD</password>
         </server>
-
+        <server>
+            <id>nexus-snapshots</id>
+            <username>admin</username>
+            <password>NEXUS_PASSWORD</password>
+        </server>
     </servers>
 
     <profiles>
         <profile>
-            <id>github</id>
+            <id>nexus</id>
             <repositories>
+                <!-- fintrack-common releases hosted on local Nexus -->
                 <repository>
-                    <id>github</id>
-                    <name>FinTrack Common — GitHub Packages</name>
-                    <url>https://maven.pkg.github.com/Yamtcha/fintrack-common</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                        <updatePolicy>always</updatePolicy>
-                    </snapshots>
-                </repository>
-
-                <repository>
-                    <id>central</id>
-                    <name>Maven Central</name>
-                    <url>https://repo1.maven.org/maven2</url>
+                    <id>nexus</id>
+                    <name>FinTrack — Nexus Releases</name>
+                    <url>http://localhost:8081/repository/fintrack/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -41,13 +33,63 @@
                         <enabled>false</enabled>
                     </snapshots>
                 </repository>
-
+                <!-- Snapshot builds during active development -->
+                <repository>
+                    <id>nexus-snapshots</id>
+                    <name>FinTrack — Nexus Snapshots</name>
+                    <url>http://localhost:8081/repository/fintrack-snapshots/</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </repository>
+                <!-- Maven Central proxied through Nexus -->
+                <!-- All external dependencies flow through your local cache -->
+                <repository>
+                    <id>nexus-central</id>
+                    <name>Maven Central via Nexus Proxy</name>
+                    <url>http://localhost:8081/repository/maven-central/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
             </repositories>
+
+            <pluginRepositories>
+                <!-- Maven plugins also resolved through local Nexus -->
+                <pluginRepository>
+                    <id>nexus-central</id>
+                    <name>Maven Central via Nexus Proxy</name>
+                    <url>http://localhost:8081/repository/maven-central/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
         </profile>
     </profiles>
 
+    <!-- Activate the nexus profile by default for all builds -->
     <activeProfiles>
-        <activeProfile>github</activeProfile>
+        <activeProfile>nexus</activeProfile>
     </activeProfiles>
+
+    <mirrors>
+        <mirror>
+            <id>nexus-mirror</id>
+            <name>Local Nexus Mirror</name>
+            <url>http://localhost:8081/repository/maven-public/</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+    </mirrors>
 
 </settings>
