@@ -78,18 +78,18 @@
         </profile>
     </profiles>
 
-    <!-- Activate the nexus profile by default for all builds -->
-    <activeProfiles>
-        <activeProfile>nexus</activeProfile>
-    </activeProfiles>
+<!--    &lt;!&ndash; Activate the nexus profile by default for all builds &ndash;&gt;-->
+<!--    <activeProfiles>-->
+<!--        <activeProfile>nexus</activeProfile>-->
+<!--    </activeProfiles>-->
 
-    <mirrors>
-        <mirror>
-            <id>nexus-mirror</id>
-            <name>Local Nexus Mirror</name>
-            <url>http://localhost:8081/repository/maven-public/</url>
-            <mirrorOf>*</mirrorOf>
-        </mirror>
-    </mirrors>
+<!--    <mirrors>-->
+<!--        <mirror>-->
+<!--            <id>nexus-mirror</id>-->
+<!--            <name>Local Nexus Mirror</name>-->
+<!--            <url>http://localhost:8081/repository/maven-public/</url>-->
+<!--            <mirrorOf>*</mirrorOf>-->
+<!--        </mirror>-->
+<!--    </mirrors>-->
 
 </settings>

@@ -2,24 +2,39 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="Maven2 Artifact Repository" />
+      <option name="name" value="Maven2 Artifact Repository" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Backbase Artifact Repository UI" />
+      <option name="name" value="Backbase Artifact Repository UI" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus-snapshots" />
+      <option name="name" value="FinTrack — Nexus Snapshots" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="Backbase Artifact Repository" />
-      <option name="name" value="Backbase Artifact Repository" />
-      <option name="url" value="https://aws-tools.standardbank.co.za/nexus/repository/backbase-repo/" />
+      <option name="id" value="Nexus Backbase_DBS" />
+      <option name="name" value="Nexus Backbase_DBS" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Maven central Artifact Repository" />
+      <option name="name" value="Maven central Artifact Repository" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="Backbase Artifact Repository UI" />
       <option name="name" value="Backbase Artifact Repository UI" />
       <option name="url" value="https://aws-tools.standardbank.co.za/nexus/repository/Backbase-ui/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="Nexus Backbase_DBS" />
-      <option name="name" value="Nexus Backbase_DBS" />
-      <option name="url" value="https://aws-tools.standardbank.co.za/nexus/repository/Backbase_DBS/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="Maven2 Artifact Repository" />
@@ -37,9 +52,54 @@
       <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="Nexus SADigital-BB" />
+      <option name="name" value="Nexus SADigital-BB" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="Nexus SADigital-BB-snapshots" />
       <option name="name" value="Nexus SADigital-BB-snapshots" />
       <option name="url" value="https://aws-tools.standardbank.co.za/nexus/repository/SADigital-BB-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Backbase expert release local Repository" />
+      <option name="name" value="Backbase expert release local Repository" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Nexus SADigital-BB-snapshots" />
+      <option name="name" value="Nexus SADigital-BB-snapshots" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Backbase Artifact Repository" />
+      <option name="name" value="Backbase Artifact Repository" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Backbase Artifact Repository" />
+      <option name="name" value="Backbase Artifact Repository" />
+      <option name="url" value="https://aws-tools.standardbank.co.za/nexus/repository/backbase-repo/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus-central" />
+      <option name="name" value="Maven Central via Nexus Proxy" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Nexus Backbase_DBS" />
+      <option name="name" value="Nexus Backbase_DBS" />
+      <option name="url" value="https://aws-tools.standardbank.co.za/nexus/repository/Backbase_DBS/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus" />
+      <option name="name" value="FinTrack — Nexus Releases" />
+      <option name="url" value="http://localhost:8081/repository/maven-public/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="jboss.community" />

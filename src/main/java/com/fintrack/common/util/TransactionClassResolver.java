@@ -9,12 +9,12 @@ public final class TransactionClassResolver {
 
     public static TransactionClass resolve(SourceType sourceType, String kind) {
         return switch (sourceType) {
-            case DEBIT -> TransactionClass.PAYMENT;
+            case DEBIT -> TransactionClass.SPENDING;
             case LOANS -> TransactionClass.DEBT_PAYMENT;
             case INVESTMENTS -> TransactionClass.TRADE;
-            case CREDIT -> "payment".equalsIgnoreCase(kind)
+            case CREDIT -> "DEBT_PAYMENT".equalsIgnoreCase(kind)
                     ? TransactionClass.DEBT_PAYMENT
-                    : TransactionClass.CHARGE;
+                    : TransactionClass.SPENDING;
         };
     }
 }

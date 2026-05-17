@@ -1,8 +1,7 @@
 package com.fintrack.common.domain;
 
 public enum TransactionClass {
-    PAYMENT,
-    CHARGE,
+    SPENDING,
     DEBT_PAYMENT,
     TRADE;
 

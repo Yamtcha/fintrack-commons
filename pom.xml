@@ -24,19 +24,19 @@
         <jakarta.validation.version>3.1.0</jakarta.validation.version>
     </properties>
 
-    <!-- Publish to GitHub Packages -->
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/Yamtcha/fintrack-common</url>
-        </repository>
-        <snapshotRepository>
-            <id>github</id>
-            <name>GitHub Packages Snapshots</name>
-            <url>https://maven.pkg.github.com/Yamtcha/fintrack-common</url>
-        </snapshotRepository>
-    </distributionManagement>
+<!--    &lt;!&ndash; Publish to GitHub Packages &ndash;&gt;-->
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>github</id>-->
+<!--            <name>GitHub Packages</name>-->
+<!--            <url>https://maven.pkg.github.com/Yamtcha/fintrack-common</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>github</id>-->
+<!--            <name>GitHub Packages Snapshots</name>-->
+<!--            <url>https://maven.pkg.github.com/Yamtcha/fintrack-common</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
 
     <dependencies>
         <!-- Jackson core databind -->
