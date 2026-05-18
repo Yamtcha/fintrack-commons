@@ -28,7 +28,5 @@ public class TransactionIngestedEvent {
 
     private Transaction transaction;
 
-    private List<String> targetAggregators;
-
     private String batchId;
 }

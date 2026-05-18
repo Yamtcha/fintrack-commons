@@ -1,12 +1,10 @@
 package com.fintrack.common.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.InstantSerializer;
 import com.fasterxml.jackson.datatype.jsr310.deser.InstantDeserializer;
 import com.fintrack.common.domain.SourceType;
-import com.fintrack.common.domain.TransactionClass;
 import com.fintrack.common.domain.TransactionStatus;
 import com.fintrack.common.domain.TransactionType;
 import lombok.AllArgsConstructor;
@@ -16,7 +14,6 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.Map;
 import java.util.UUID;
 
 @Data
@@ -32,8 +29,6 @@ public class Transaction {
     private String sourceId;
 
     private SourceType sourceType;
-
-    private TransactionClass transactionClass;
 
     private String currency;
 
